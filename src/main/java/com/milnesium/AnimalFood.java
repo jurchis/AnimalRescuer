@@ -8,7 +8,7 @@ public class AnimalFood {
 
     String name;
     int price;
-    byte age;
+    byte quantity;
     boolean stockAvailability;
     Date expirationDate = new Date();
 }

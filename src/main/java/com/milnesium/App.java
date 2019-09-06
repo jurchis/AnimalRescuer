@@ -1,5 +1,7 @@
 package com.milnesium;
 
+import java.util.Date;
+
 /**
  * Hello world!
  *
@@ -25,6 +27,20 @@ public class App
         AnimalMDStaff Vet = new AnimalMDStaff();
         Vet.name="Orel";
         Vet.specialization="Dogs";
+
+        AnimalFood food = new AnimalFood();
+        food.name="Good Beef";
+        food.price=10;
+        food.stockAvailability=true;
+        food.quantity=5;
+
+        AnimalActivity sleep = new AnimalActivity();
+        sleep.name="Sleeping";
+        
+        //HELP NEEDED: I tryied to create expiration date but did not managed to
+
+        //HELP NEEDED: At this point in time I cannot see what I can do with Game. I have a Vet there but I already
+        //have a vet declared above with the use of AnimalMDStaff. Is the purpose of that to use inheritance?
 
         System.out.println("The story of " +Dog.name+ " and his rescuer " +Rescuer.name+"\n");
         System.out.println(Dog.name+" is our rescued dog.\nHe has "+Dog.age+ " years, he likes "+Dog.favoriteActivity+

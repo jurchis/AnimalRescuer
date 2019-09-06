@@ -1,7 +1,7 @@
 package com.milnesium;
 
-public class Animal {
-    
+public class Animal{
+
     String name;
     byte age;
     byte healthLevel;
