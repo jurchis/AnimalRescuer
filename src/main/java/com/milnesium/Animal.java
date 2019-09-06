@@ -9,4 +9,13 @@ public class Animal{
     byte happinessLevel;
     String favoriteFood;
     String favoriteActivity;
+
+    //additional properties
+    String overallColor;
+    String eyeColor;
+    //good, bad, not so good
+    String behavior;
+    //how much does it care about the rescuer 1 to 10
+    byte rescuerLove;
+
 }
