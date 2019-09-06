@@ -17,5 +17,6 @@ public class Animal{
     String behavior;
     //how much does it care about the rescuer 1 to 10
     byte rescuerLove;
+    byte kilograms;
 
 }
