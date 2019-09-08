@@ -24,8 +24,7 @@ public class App
         Dog.hungryLevel=9;
 
         //AnimalRescuer class object
-        AnimalRescuer Rescuer = new AnimalRescuer();
-        Rescuer.name="Lorin";
+        AnimalRescuer Rescuer = new AnimalRescuer("Lorin");
         Rescuer.availableCash=10000;
 
         //AnimalMDClass object
@@ -34,8 +33,7 @@ public class App
         Vet.specialization="Dogs";
 
         //AnimalFood class object
-        AnimalFood food = new AnimalFood();
-        food.name="Good Beef";
+        AnimalFood food = new AnimalFood("Good beef");
         food.price=10;
         food.stockAvailability=true;
         food.quantity=5;
@@ -57,8 +55,7 @@ public class App
         petHotel.name  = "7*Animals";
 
         //AnimalRescuerCompanion class object
-        AnimalRescuerCompanion companion = new AnimalRescuerCompanion();
-        companion.name = "Elisa";
+        AnimalRescuerCompanion companion = new AnimalRescuerCompanion("Elisa");
         companion.bonding = 9;
         companion.availableCash = 1000;
         companion.care = 9;
@@ -66,8 +63,7 @@ public class App
         companion.yard = true;
 
         //AnimalToys class object
-        AnimalToys toys = new AnimalToys();
-        toys.name = "ToyToys";
+        AnimalToys toys = new AnimalToys("ToyToys");
         toys.color = "Purple";
         toys.pieces = 3;
 
@@ -77,8 +73,7 @@ public class App
         tamagotchi.animalRescuer = Rescuer;
         tamagotchi.animalMDStaff = Vet;
 
-        AnimalOutsideToys outToy = new AnimalOutsideToys();
-        outToy.name = "Ball";
+        AnimalOutsideToys outToy = new AnimalOutsideToys("Ball");
         outToy.color = "Blue";
         outToy.pieces = 1;
         outToy.outsidePurpose = "Catch";

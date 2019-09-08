@@ -3,6 +3,11 @@ package com.milnesium;
 public class AnimalRescuer {
 
     String name;
+
+    public AnimalRescuer(String name) {
+        this.name = name;
+    }
+
     int availableCash;
 
     //additional properties

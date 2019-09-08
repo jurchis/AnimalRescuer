@@ -7,6 +7,10 @@ import java.time.LocalDate;
 
 public class AnimalFood {
 
+    public AnimalFood(String name) {
+        this.name = name;
+    }
+
     String name;
     int price;
     byte quantity;
@@ -16,6 +20,7 @@ public class AnimalFood {
     //new properties
     int proteins;
     String manufacturer;
+
     //quality from 1 to 10
     byte quality;
     //size in grams
