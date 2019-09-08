@@ -60,6 +60,10 @@ public class App
         AnimalRescuerCompanion companion = new AnimalRescuerCompanion();
         companion.name = "Elisa";
         companion.bonding = 9;
+        companion.availableCash = 1000;
+        companion.care = 9;
+        companion.workFromHome = true;
+        companion.yard = true;
 
         //AnimalToys class object
         AnimalToys toys = new AnimalToys();
@@ -72,6 +76,12 @@ public class App
         tamagotchi.animal = Dog;
         tamagotchi.animalRescuer = Rescuer;
         tamagotchi.animalMDStaff = Vet;
+
+        AnimalOutsideToys outToy = new AnimalOutsideToys();
+        outToy.name = "Ball";
+        outToy.color = "Blue";
+        outToy.pieces = 1;
+        outToy.outsidePurpose = "Catch";
 
         System.out.println("The story of " +Dog.name+ " and his rescuer " +Rescuer.name+"\n");
         System.out.println(Dog.name+" is our rescued dog.\nHe has "+Dog.age+ " years, he likes "+Dog.favoriteActivity+
