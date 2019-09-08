@@ -1,5 +1,7 @@
 package com.milnesium;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.Date;
 
 /**
@@ -11,6 +13,7 @@ public class App
     public static void main( String[] args )
     {
 
+        //Animal class object
         Animal Dog = new Animal();
         Dog.name="Zorel";
         Dog.age=2;
@@ -20,27 +23,55 @@ public class App
         Dog.healthLevel=8;
         Dog.hungryLevel=9;
 
+        //AnimalRescuer class object
         AnimalRescuer Rescuer = new AnimalRescuer();
         Rescuer.name="Lorin";
         Rescuer.availableCash=10000;
 
+        //AnimalMDClass object
         AnimalMDStaff Vet = new AnimalMDStaff();
         Vet.name="Orel";
         Vet.specialization="Dogs";
 
+        //AnimalFood class object
         AnimalFood food = new AnimalFood();
         food.name="Good Beef";
         food.price=10;
         food.stockAvailability=true;
         food.quantity=5;
+        food.expirationDate = LocalDate.of(2019, Month.DECEMBER, 9);
 
+        //AnimalActivity class object
         AnimalActivity sleep = new AnimalActivity();
         sleep.name="Sleeping";
-        
-        //HELP NEEDED: I tryied to create expiration date but did not managed to
 
-        //HELP NEEDED: At this point in time I cannot see what I can do with Game. I have a Vet there but I already
-        //have a vet declared above with the use of AnimalMDStaff. Is the purpose of that to use inheritance?
+        //AnimalHome class object
+        AnimalHome home = new AnimalHome();
+        home.type = "CuteHome";
+        home.size = "M";
+        home.color = "yellow";
+
+        //AnimalHotel class object;
+        AnimalHotel petHotel = new AnimalHotel();
+        petHotel.availabilityInArea = true;
+        petHotel.name  = "7*Animals";
+
+        //AnimalRescuerCompanion class object
+        AnimalRescuerCompanion companion = new AnimalRescuerCompanion();
+        companion.name = "Elisa";
+        companion.bonding = 9;
+
+        //AnimalToys class object
+        AnimalToys toys = new AnimalToys();
+        toys.name = "ToyToys";
+        toys.color = "Purple";
+        toys.pieces = 3;
+
+        //Game class object
+        Game tamagotchi = new Game();
+        tamagotchi.animal = Dog;
+        tamagotchi.animalRescuer = Rescuer;
+        tamagotchi.animalMDStaff = Vet;
 
         System.out.println("The story of " +Dog.name+ " and his rescuer " +Rescuer.name+"\n");
         System.out.println(Dog.name+" is our rescued dog.\nHe has "+Dog.age+ " years, he likes "+Dog.favoriteActivity+

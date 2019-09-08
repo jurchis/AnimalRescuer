@@ -1,8 +1,9 @@
 package com.milnesium;
 
 //import java.util.Calendar;
-import java.util.Date;
 //import java.util.GregorianCalendar;
+import java.time.LocalDate;
+//import java.util.Date;
 
 public class AnimalFood {
 
@@ -10,7 +11,7 @@ public class AnimalFood {
     int price;
     byte quantity;
     boolean stockAvailability;
-    Date expirationDate = new Date();
+    LocalDate expirationDate = LocalDate.now();
 
     //new properties
     int proteins;
