@@ -15,7 +15,8 @@ public class AnimalFood {
     int price;
     byte quantity;
     boolean stockAvailability;
-    LocalDate expirationDate = LocalDate.now();
+
+    LocalDate expirationDate;
 
     //new properties
     int proteins;
