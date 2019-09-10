@@ -14,8 +14,7 @@ public class App
     {
 
         //Animal class object
-        Animal Dog = new Animal();
-        Dog.name="Zorel";
+        Animal Dog = new Animal("Zorel");
         Dog.age=2;
         Dog.favoriteActivity="Outside Walk";
         Dog.favoriteFood="Beef";
@@ -28,8 +27,7 @@ public class App
         Rescuer.availableCash=10000;
 
         //AnimalMDClass object
-        AnimalMDStaff Vet = new AnimalMDStaff();
-        Vet.name="Orel";
+        AnimalMDStaff Vet = new AnimalMDStaff("Orel");
         Vet.specialization="Dogs";
 
         //AnimalFood class object
@@ -40,19 +38,16 @@ public class App
         food.expirationDate = LocalDate.of(2019, Month.DECEMBER, 9);
 
         //AnimalActivity class object
-        AnimalActivity sleep = new AnimalActivity();
-        sleep.name="Sleeping";
+        AnimalActivity sleep = new AnimalActivity("Sleeping");
 
         //AnimalHome class object
-        AnimalHome home = new AnimalHome();
-        home.type = "CuteHome";
+        AnimalHome home = new AnimalHome("CuteHome");
         home.size = "M";
         home.color = "yellow";
 
         //AnimalHotel class object;
-        AnimalHotel petHotel = new AnimalHotel();
+        AnimalHotel petHotel = new AnimalHotel("7*Animals");
         petHotel.availabilityInArea = true;
-        petHotel.name  = "7*Animals";
 
         //AnimalRescuerCompanion class object
         AnimalRescuerCompanion companion = new AnimalRescuerCompanion("Elisa");
@@ -65,17 +60,16 @@ public class App
         //AnimalToys class object
         AnimalToys toys = new AnimalToys("ToyToys");
         toys.color = "Purple";
-        toys.pieces = 3;
+        toys.quantity = 3;
 
         //Game class object
-        Game tamagotchi = new Game();
-        tamagotchi.animal = Dog;
+        Game tamagotchi = new Game(Dog);
         tamagotchi.animalRescuer = Rescuer;
         tamagotchi.animalMDStaff = Vet;
 
         AnimalOutsideToys outToy = new AnimalOutsideToys("Ball");
         outToy.color = "Blue";
-        outToy.pieces = 1;
+        outToy.quantity = 1;
         outToy.outsidePurpose = "Catch";
 
         System.out.println("The story of " +Dog.name+ " and his rescuer " +Rescuer.name+"\n");

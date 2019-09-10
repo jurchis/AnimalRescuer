@@ -2,6 +2,10 @@ package com.milnesium;
 
 public class Animal{
 
+    public Animal(String name) {
+        this.name = name;
+    }
+
     String name;
     byte age;
     byte healthLevel;

@@ -2,6 +2,10 @@ package com.milnesium;
 
 public class AnimalActivity {
 
+    public AnimalActivity(String name) {
+        this.name = name;
+    }
+
     String name;
 
     //Additional properties

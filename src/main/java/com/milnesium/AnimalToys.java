@@ -1,12 +1,10 @@
 package com.milnesium;
 
-public class AnimalToys {
+public class AnimalToys extends AnimalStuff{
+
+    String color;
 
     public AnimalToys(String name) {
-        this.name = name;
+        super(name);
     }
-
-    String name;
-    String color;
-    byte pieces;
 }
