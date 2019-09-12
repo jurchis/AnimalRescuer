@@ -10,11 +10,50 @@ public class AnimalActivity {
 
     //Additional properties
     //how much time for playing
-    short time;
+    private short time;
     //when exactly morning, afternoon
-    String dayPlayPeriod;
-    String place;
+    private String dayPlayPeriod;
+    private String place;
     //how far from home is happening the activity
-    int distance;
+    private int distance;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public short getTime() {
+        return time;
+    }
+
+    public void setTime(short time) {
+        this.time = time;
+    }
+
+    public String getDayPlayPeriod() {
+        return dayPlayPeriod;
+    }
+
+    public void setDayPlayPeriod(String dayPlayPeriod) {
+        this.dayPlayPeriod = dayPlayPeriod;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public void setPlace(String place) {
+        this.place = place;
+    }
+
+    public int getDistance() {
+        return distance;
+    }
+
+    public void setDistance(int distance) {
+        this.distance = distance;
+    }
 }

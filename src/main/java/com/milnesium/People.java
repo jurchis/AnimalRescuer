@@ -6,13 +6,53 @@ public class People {
         this.name = name;
     }
 
-    String name;
-    int availableCash;
+    private String name;
+    private int availableCash;
     //additional properties
     //1 to 10 care for the animal
-    byte care;
+    private byte care;
     //Does he have a yard
-    boolean yard;
+    private boolean yard;
     //Can he work from home
-    boolean workFromHome;
+    private boolean workFromHome;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAvailableCash() {
+        return availableCash;
+    }
+
+    public void setAvailableCash(int availableCash) {
+        this.availableCash = availableCash;
+    }
+
+    public byte getCare() {
+        return care;
+    }
+
+    public void setCare(byte care) {
+        this.care = care;
+    }
+
+    public boolean isYard() {
+        return yard;
+    }
+
+    public void setYard(boolean yard) {
+        this.yard = yard;
+    }
+
+    public boolean isWorkFromHome() {
+        return workFromHome;
+    }
+
+    public void setWorkFromHome(boolean workFromHome) {
+        this.workFromHome = workFromHome;
+    }
 }

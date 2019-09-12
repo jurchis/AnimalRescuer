@@ -11,78 +11,79 @@ import java.util.Date;
 public class App 
 {
     public static void main( String[] args )
-    {
+    {;
 
         //Animal class object
         Animal Dog = new Animal("Zorel");
-        Dog.age=2;
-        Dog.favoriteActivity="Outside Walk";
-        Dog.favoriteFood="Beef";
-        Dog.happinessLevel=5;
-        Dog.healthLevel=8;
-        Dog.hungryLevel=9;
+        Dog.setAge((byte) 2);
+        Dog.setFavoriteActivity("Outside Walk");
+        Dog.setFavoriteFood("Beef");
+        Dog.setHappinessLevel((byte) 5);
+        Dog.setHealthLevel((byte) 8);
+        Dog.setHungryLevel((byte) 9);
 
         //AnimalRescuer class object
         AnimalRescuer Rescuer = new AnimalRescuer("Lorin");
-        Rescuer.availableCash=10000;
+        Rescuer.setAvailableCash(10000);
 
         //AnimalMDClass object
         AnimalMDStaff Vet = new AnimalMDStaff("Orel");
-        Vet.specialization="Dogs";
+        Vet.setSpecialization("Dogs");
 
         //AnimalFood class object
         AnimalFood food = new AnimalFood("Good beef");
-        food.price=10;
-        food.stockAvailability=true;
-        food.quantity=5;
-        food.expirationDate = LocalDate.of(2019, Month.DECEMBER, 9);
+        food.setPrice(10);
+        food.setStockAvailability(true);
+        food.setQuantity((byte) 5);
+        food.setExpirationDate(LocalDate.of(2019, Month.DECEMBER, 9));
 
         //AnimalActivity class object
         AnimalActivity sleep = new AnimalActivity("Sleeping");
 
         //AnimalHome class object
         AnimalHome home = new AnimalHome("CuteHome");
-        home.size = "M";
-        home.color = "yellow";
+        home.setSize("M");
+        home.setColor("yellow");
 
         //AnimalHotel class object;
         AnimalHotel petHotel = new AnimalHotel("7*Animals");
-        petHotel.availabilityInArea = true;
+        petHotel.setAvailabilityInArea(
+                true);
 
         //AnimalRescuerCompanion class object
         AnimalRescuerCompanion companion = new AnimalRescuerCompanion("Elisa");
-        companion.bonding = 9;
-        companion.availableCash = 1000;
-        companion.care = 9;
-        companion.workFromHome = true;
-        companion.yard = true;
+        companion.setBonding((byte) 9);
+        companion.setAvailableCash(1000);
+        companion.setCare((byte) 9);
+        companion.setWorkFromHome(true);
+        companion.setYard(true);
 
         //AnimalToys class object
         AnimalToys toys = new AnimalToys("ToyToys");
-        toys.color = "Purple";
-        toys.quantity = 3;
+        toys.setColor("Purple");
+        toys.setQuantity((byte) 3);
 
         //Game class object
         Game tamagotchi = new Game(Dog);
-        tamagotchi.animalRescuer = Rescuer;
-        tamagotchi.animalMDStaff = Vet;
+        tamagotchi.setAnimalRescuer(Rescuer);
+        tamagotchi.setAnimalMDStaff(Vet);
 
         AnimalOutsideToys outToy = new AnimalOutsideToys("Ball");
-        outToy.color = "Blue";
-        outToy.quantity = 1;
-        outToy.outsidePurpose = "Catch";
+        outToy.setColor("Blue");
+        outToy.setQuantity((byte) 1);
+        outToy.setOutsidePurpose("Catch");
 
-        System.out.println("The story of " +Dog.name+ " and his rescuer " +Rescuer.name+"\n");
-        System.out.println(Dog.name+" is our rescued dog.\nHe has "+Dog.age+ " years, he likes "+Dog.favoriteActivity+
-                " and his favorite food is "+ Dog.favoriteFood+".");
-        System.out.println("Regarding his overall status, "+Dog.name+" is having the following levels:\n"+
-                Dog.happinessLevel+ " Happiness Level out of 10,\n"+
-                Dog.healthLevel+ " Health Level out of 10 and\n" +
-                Dog.hungryLevel+ " Hungry Level out of 10.");
-        System.out.println(Dog.name+ " is fortunate because was rescued by a person that loves dogs named "+
-                Rescuer.name +".\nAlso "+ Rescuer.name + " happens to have "+Rescuer.availableCash+
-                " cash available so he will buy for " + Dog.name + " plenty of " + Dog.favoriteFood+".");
-        System.out.println("In the end our good dog was checked by "+Vet.name+" a very good Vet,\nspecialized in: "+
-                Vet.specialization+".");
+        System.out.println("The story of " +Dog.getName()+ " and his rescuer " +Rescuer.getName()+"\n");
+        System.out.println(Dog.getName()+" is our rescued dog.\nHe has "+Dog.getAge()+ " years, he likes "+Dog.getFavoriteActivity()+
+                " and his favorite food is "+ Dog.getFavoriteFood()+".");
+        System.out.println("Regarding his overall status, "+Dog.getName()+" is having the following levels:\n"+
+                Dog.getHappinessLevel()+ " Happiness Level out of 10,\n"+
+                Dog.getHappinessLevel()+ " Health Level out of 10 and\n" +
+                Dog.getHungryLevel()+ " Hungry Level out of 10.");
+        System.out.println(Dog.getName()+ " is fortunate because was rescued by a person that loves dogs named "+
+                Rescuer.getName() +".\nAlso "+ Rescuer.getName() + " happens to have "+Rescuer.getAvailableCash()+
+                " cash available so he will buy for " + Dog.getName() + " plenty of " + Dog.getFavoriteFood()+".");
+        System.out.println("In the end our good dog was checked by "+Vet.getName()+" a very good Vet,\nspecialized in: "+
+                Vet.getSpecialization()+".");
     }
 }

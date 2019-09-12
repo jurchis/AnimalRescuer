@@ -6,6 +6,22 @@ public class AnimalStuff {
         this.name = name;
     }
 
-    String name;
-    byte quantity;
+    private String name;
+    private byte quantity;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public byte getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(byte quantity) {
+        this.quantity = quantity;
+    }
 }

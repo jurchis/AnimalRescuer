@@ -6,6 +6,22 @@ public class AnimalHotel {
         this.name = name;
     }
 
-    String name;
-    boolean availabilityInArea;
+    private String name;
+    private boolean availabilityInArea;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isAvailabilityInArea() {
+        return availabilityInArea;
+    }
+
+    public void setAvailabilityInArea(boolean availabilityInArea) {
+        this.availabilityInArea = availabilityInArea;
+    }
 }
