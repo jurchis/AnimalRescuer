@@ -16,4 +16,24 @@ public class AnimalRescuer extends People{
     public AnimalRescuer(String name) {
         super(name);
     }
+
+    public void feedAnimal(Animal animal, AnimalFood food){
+
+        int oldHungryLevel = animal.getHungryLevel();
+        System.out.println(getName()+" just gave some " +food+" food to "+animal);
+
+        animal.setHungryLevel((byte) (animal.getHungryLevel()+1));
+        System.out.println(animal.getHungryLevel()+" is the new hungry level after feeding the animal which had "
+                +oldHungryLevel+" before being feed;");
+    }
+
+    public void doRelaxation(Animal animal, AnimalActivity activity){
+
+        int oldHappinessLevel = animal.getHappinessLevel();
+        System.out.println(getName()+ " did " +activity +" recreation activity with "+animal);
+        animal.setHappinessLevel((byte) (animal.getHappinessLevel()+1));
+        System.out.println(animal.getHappinessLevel()+
+                " is the new happiness level after doing a relaxation activity with the animal that had "+
+                oldHappinessLevel);
+    }
 }

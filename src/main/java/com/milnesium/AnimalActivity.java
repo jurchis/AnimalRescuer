@@ -29,6 +29,11 @@ public class AnimalActivity {
         return time;
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
+
     public void setTime(short time) {
         this.time = time;
     }

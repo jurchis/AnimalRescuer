@@ -55,4 +55,9 @@ public class People {
     public void setWorkFromHome(boolean workFromHome) {
         this.workFromHome = workFromHome;
     }
+
+    public void feedAnimal(String Animal, String AnimalFood) {
+        System.out.println(getName()+" just gave some "+ AnimalFood + " food to " + Animal);
+
+    }
 }

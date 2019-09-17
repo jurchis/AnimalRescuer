@@ -24,4 +24,10 @@ public class AnimalStuff {
     public void setQuantity(byte quantity) {
         this.quantity = quantity;
     }
+
+    //Override the toString class in order to display the actual name in method from class AnimalRescuer
+    @Override
+    public String toString() {
+        return  name;
+    }
 }

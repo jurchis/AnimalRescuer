@@ -118,4 +118,9 @@ public class Animal{
     public void setKilograms(byte kilograms) {
         this.kilograms = kilograms;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

@@ -11,7 +11,7 @@ import java.util.Date;
 public class App 
 {
     public static void main( String[] args )
-    {;
+    {
 
         //Animal class object
         Animal Dog = new Animal("Zorel");
@@ -85,5 +85,10 @@ public class App
                 " cash available so he will buy for " + Dog.getName() + " plenty of " + Dog.getFavoriteFood()+".");
         System.out.println("In the end our good dog was checked by "+Vet.getName()+" a very good Vet,\nspecialized in: "+
                 Vet.getSpecialization()+".");
+
+        Vet.feedAnimal(Dog.getName(), food.getName());
+
+        Rescuer.feedAnimal(Dog,food);
+        Rescuer.doRelaxation(Dog, sleep);
     }
 }
