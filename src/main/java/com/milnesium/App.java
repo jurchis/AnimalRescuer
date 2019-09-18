@@ -87,8 +87,28 @@ public class App
                 Vet.getSpecialization()+".");
 
         Vet.feedAnimal(Dog.getName(), food.getName());
-
         Rescuer.feedAnimal(Dog,food);
         Rescuer.doRelaxation(Dog, sleep);
+        Dog.happy(Dog.getHappinessLevel());
+
+        com.milnesium.Dog beagle = new Dog("Grivei");
+        beagle.setHappinessLevel((byte) 7);
+
+        Cat irishBlue = new Cat("Mitzi");
+        irishBlue.setHappinessLevel((byte) 9);
+
+        Bird parrot = new Bird("Johnny");
+        parrot.setHappinessLevel((byte) 9);
+
+        System.out.println("\nTesting for the actual situation:");
+        beagle.happy(beagle.getHappinessLevel());
+        irishBlue.happy(irishBlue.getHappinessLevel());
+        parrot.happy(parrot.getHappinessLevel());
+
+        System.out.println("\nTesting for unhappiness:");
+        beagle.happy(6);
+        irishBlue.happy(5);
+        parrot.happy(5);
+
     }
 }

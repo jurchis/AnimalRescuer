@@ -123,4 +123,12 @@ public class Animal{
     public String toString() {
         return name;
     }
+
+    public void happy(int happinessLevel){
+        if (happinessLevel>6){
+            System.out.println("The animal is happy");}
+        else    {
+            System.out.println("The animal is unhappy");
+        }
+    }
 }
