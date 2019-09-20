@@ -10,9 +10,9 @@ public class Cat extends Animal {
     @Override
     public void happy(int happinessLevel) {
         if (happinessLevel>8){
-            System.out.println("The Cat is purring");}
+            System.out.println(getName()+" is purring");}
         else    {
-            System.out.println("The cat is unhappy");
+            System.out.println(getName()+" is unhappy");
         }
     }
 
