@@ -17,7 +17,7 @@ public class AnimalRescuer extends People{
         int oldHungryLevel = animal.getHungryLevel();
         System.out.println(getName()+" just gave some " +food.getName()+" food to "+animal.getName());
 
-        animal.setHungryLevel((byte) (animal.getHungryLevel()+1));
+        animal.setHungryLevel((byte) (animal.getHungryLevel()-1));
         System.out.println(animal.getHungryLevel()+" is the new hungry level after feeding the animal which had "
                 +oldHungryLevel+" before being feed;");
     }
