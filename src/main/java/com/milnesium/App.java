@@ -30,14 +30,14 @@ public class App
         vet.setSpecialization("Dogs");
 
         //AnimalFood class object
-        AnimalFood food = new AnimalFood("Good beef");
+        AnimalFood food = new AnimalFood("Beef");
         food.setPrice(10);
         food.setStockAvailability(true);
         food.setQuantity((byte) 5);
         food.setExpirationDate(LocalDate.of(2019, Month.DECEMBER, 9));
 
         //AnimalActivity class object
-        AnimalActivity sleep = new AnimalActivity("Sleeping");
+        AnimalActivity sleep = new AnimalActivity("Outside Walk");
 
         //AnimalHome class object
         AnimalHome home = new AnimalHome("CuteHome");
