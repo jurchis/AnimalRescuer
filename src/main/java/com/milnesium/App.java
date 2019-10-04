@@ -12,7 +12,6 @@ public class App
 {
     public static void main( String[] args )
     {
-
         //Animal class object
         Animal dog = new Animal("Zorel");
         dog.setAge((byte) 2);
