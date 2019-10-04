@@ -91,13 +91,13 @@ public class App
         rescuer.doRelaxation(dog, sleep);
         dog.happy(dog.getHappinessLevel());
 
-        com.milnesium.Dog beagle = new Dog("Grivei");
+        Animal beagle = new Dog("Grivei");
         beagle.setHappinessLevel((byte) 7);
 
-        Cat irishBlue = new Cat("Mitzi");
+        Animal irishBlue = new Cat("Mitzi");
         irishBlue.setHappinessLevel((byte) 9);
 
-        Bird parrot = new Bird("Johnny");
+        Animal parrot = new Bird("Johnny");
         parrot.setHappinessLevel((byte) 9);
 
         System.out.println("\nTesting for the actual situation:");
