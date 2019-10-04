@@ -7,6 +7,7 @@ import java.time.LocalDate;
 
 public class AnimalFood extends AnimalStuff{
 
+    //Variables
     private boolean stockAvailability;
     private int price;
     private LocalDate expirationDate;
@@ -19,10 +20,12 @@ public class AnimalFood extends AnimalStuff{
     //size in grams
     private int sizeGram;
 
+    //Constructors Super etc
     public AnimalFood(String name) {
         super(name);
     }
 
+    //Getters + Setters
     public boolean isStockAvailability() {
         return stockAvailability;
     }

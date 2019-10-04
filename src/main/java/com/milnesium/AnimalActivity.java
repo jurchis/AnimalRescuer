@@ -2,10 +2,7 @@ package com.milnesium;
 
 public class AnimalActivity {
 
-    public AnimalActivity(String name) {
-        this.name = name;
-    }
-
+    //Variables
     String name;
 
     //Additional properties
@@ -17,6 +14,12 @@ public class AnimalActivity {
     //how far from home is happening the activity
     private int distance;
 
+    //Constructors Super etc
+    public AnimalActivity(String name) {
+        this.name = name;
+    }
+
+    //Getters + Setters
     public String getName() {
         return name;
     }
@@ -27,11 +30,6 @@ public class AnimalActivity {
 
     public short getTime() {
         return time;
-    }
-
-    @Override
-    public String toString() {
-        return name;
     }
 
     public void setTime(short time) {
@@ -60,5 +58,11 @@ public class AnimalActivity {
 
     public void setDistance(int distance) {
         this.distance = distance;
+    }
+
+    //Overrides
+    @Override
+    public String toString() {
+        return name;
     }
 }

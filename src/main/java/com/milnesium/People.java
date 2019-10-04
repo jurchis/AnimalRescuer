@@ -2,10 +2,7 @@ package com.milnesium;
 
 public class People {
 
-    public People(String name) {
-        this.name = name;
-    }
-
+    //Variables
     private String name;
     private int availableCash;
     //additional properties
@@ -16,6 +13,18 @@ public class People {
     //Can he work from home
     private boolean workFromHome;
 
+    //Constructors super etc.
+    public People(String name) {
+        this.name = name;
+    }
+
+    //Methods
+    public void feedAnimal(String Animal, String AnimalFood) {
+        System.out.println(getName()+" just gave some "+ AnimalFood + " food to " + Animal);
+
+    }
+
+    //Getters + Setters
     public String getName() {
         return name;
     }
@@ -54,10 +63,5 @@ public class People {
 
     public void setWorkFromHome(boolean workFromHome) {
         this.workFromHome = workFromHome;
-    }
-
-    public void feedAnimal(String Animal, String AnimalFood) {
-        System.out.println(getName()+" just gave some "+ AnimalFood + " food to " + Animal);
-
     }
 }

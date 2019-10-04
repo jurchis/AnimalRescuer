@@ -2,13 +2,16 @@ package com.milnesium;
 
 public class AnimalHotel {
 
+    //Variables
+    private String name;
+    private boolean availabilityInArea;
+
+    //Constructors Super etc.
     public AnimalHotel(String name) {
         this.name = name;
     }
 
-    private String name;
-    private boolean availabilityInArea;
-
+    //Getters + Setters
     public String getName() {
         return name;
     }

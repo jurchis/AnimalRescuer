@@ -2,10 +2,17 @@ package com.milnesium;
 
 public class Game {
 
+    //Variables
     private AnimalRescuer animalRescuer;
     private Animal animal;
     private AnimalMDStaff animalMDStaff;
 
+    //Constructors Super etc.
+    public Game(Animal animal) {
+        this.animal = animal;
+    }
+
+    //Getters + Setters
     public AnimalRescuer getAnimalRescuer() {
         return animalRescuer;
     }
@@ -28,9 +35,5 @@ public class Game {
 
     public void setAnimalMDStaff(AnimalMDStaff animalMDStaff) {
         this.animalMDStaff = animalMDStaff;
-    }
-
-    public Game(Animal animal) {
-        this.animal = animal;
     }
 }

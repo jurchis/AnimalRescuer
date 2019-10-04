@@ -2,14 +2,16 @@ package com.milnesium;
 
 public class AnimalOutsideToys extends AnimalStuff{
 
+    //Variables
     private String outsidePurpose;
+    private String color;
 
+    //Constructors Supra etc.
     public AnimalOutsideToys(String name) {
         super(name);
     }
 
-    private String color;
-
+    //Getters + Setters
     public String getOutsidePurpose() {
         return outsidePurpose;
     }

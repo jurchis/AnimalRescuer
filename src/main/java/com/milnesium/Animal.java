@@ -2,10 +2,7 @@ package com.milnesium;
 
 public class Animal{
 
-    public Animal(String name) {
-        this.name = name;
-    }
-
+    //Variables
     private String name;
     private byte age;
     private byte healthLevel;
@@ -23,6 +20,12 @@ public class Animal{
     private byte rescuerLove;
     private byte kilograms;
 
+    //Constructors super etc
+    public Animal(String name) {
+        this.name = name;
+    }
+
+    //Getters + Setters
     public String getName() {
         return name;
     }
@@ -119,6 +122,7 @@ public class Animal{
         this.kilograms = kilograms;
     }
 
+    //Override to String
     @Override
     public String toString() {
         return name;
@@ -126,9 +130,9 @@ public class Animal{
 
     public void happy(int happinessLevel){
         if (happinessLevel>6){
-            System.out.println("The animal is happy");}
+            System.out.println(getName()+" is happy");}
         else    {
-            System.out.println("The animal is unhappy");
+            System.out.println(getName()+" is unhappy");
         }
     }
 }

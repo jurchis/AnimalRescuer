@@ -1,12 +1,16 @@
 package com.milnesium;
 
 public class Cat extends Animal {
+
+    //Variables
+    int meowLevel;
+
+    //Constructors Super etc.
     public Cat(String name) {
         super(name);
     }
 
-    int meowLevel;
-
+    //Override
     @Override
     public void happy(int happinessLevel) {
         if (happinessLevel>8){

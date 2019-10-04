@@ -2,21 +2,16 @@ package com.milnesium;
 
 public class AnimalRescuer extends People{
 
+    //Variables
     //how much love feels from the animal 1 to 10
     private byte loveFelt;
 
-    public byte getLoveFelt() {
-        return loveFelt;
-    }
-
-    public void setLoveFelt(byte loveFelt) {
-        this.loveFelt = loveFelt;
-    }
-
+    //Constructor Supra etc.
     public AnimalRescuer(String name) {
         super(name);
     }
 
+    //Methods
     public void feedAnimal(Animal animal, AnimalFood food){
 
         int oldHungryLevel = animal.getHungryLevel();
@@ -35,5 +30,14 @@ public class AnimalRescuer extends People{
         System.out.println(animal.getHappinessLevel()+
                 " is the new happiness level after doing a relaxation activity with the animal that had "+
                 oldHappinessLevel);
+    }
+
+    //Getters + Setters
+    public byte getLoveFelt() {
+        return loveFelt;
+    }
+
+    public void setLoveFelt(byte loveFelt) {
+        this.loveFelt = loveFelt;
     }
 }

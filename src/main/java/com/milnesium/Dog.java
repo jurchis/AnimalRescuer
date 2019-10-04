@@ -1,12 +1,16 @@
 package com.milnesium;
 
 public class Dog extends Animal {
+
+    //Variables
+    int barkingLevel;
+
+    //Constructors Super etc.
     public Dog(String name) {
         super(name);
     }
 
-    int barkingLevel;
-
+    //Override
     @Override
     public void happy(int happinessLevel) {
         if (happinessLevel>6){
@@ -15,7 +19,4 @@ public class Dog extends Animal {
             System.out.println(getName()+" is unhappy");
         }
     }
-
-
-
 }

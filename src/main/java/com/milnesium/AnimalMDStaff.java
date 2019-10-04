@@ -2,7 +2,7 @@ package com.milnesium;
 
 public class AnimalMDStaff extends People{
 
-
+    //Variables
     private String specialization;
     //new properties
     private byte experienceYears;
@@ -11,12 +11,13 @@ public class AnimalMDStaff extends People{
     //passion for work from 1 to 10
     private byte passion;
 
+    //Constructors Supra etc.
     public AnimalMDStaff(String name) {
         super(name);
     }
     //care for the animals from 1 to 10
 
-
+    //Getters + Setters
     public String getSpecialization() {
         return specialization;
     }
