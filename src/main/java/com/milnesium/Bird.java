@@ -15,5 +15,4 @@ public class Bird extends Animal {
             System.out.println(getName()+" is unhappy");
         }
     }
-
 }
