@@ -64,4 +64,15 @@ public class People {
     public void setWorkFromHome(boolean workFromHome) {
         this.workFromHome = workFromHome;
     }
+
+    @Override
+    public String toString() {
+        return "People{" +
+                "name='" + name + '\'' +
+                ", availableCash=" + availableCash +
+                ", care=" + care +
+                ", yard=" + yard +
+                ", workFromHome=" + workFromHome +
+                '}';
+    }
 }
