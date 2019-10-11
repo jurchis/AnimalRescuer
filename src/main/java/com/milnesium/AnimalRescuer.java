@@ -17,7 +17,7 @@ public class AnimalRescuer extends People{
         int oldHungryLevel = animal.getHungryLevel();
         System.out.println(getName()+" just gave some " +food.getName()+" food to "+animal.getName());
 
-        if (food.getName()==animal.getFavoriteFood()){
+        if (food.getName().equals(animal.getFavoriteFood())){
             animal.setHungryLevel((byte) (animal.getHungryLevel()-1));
             int oldHappinessLevel = animal.getHappinessLevel();
             animal.setHappinessLevel((byte) (animal.getHappinessLevel()+1));
@@ -36,7 +36,7 @@ public class AnimalRescuer extends People{
 
     public void doRelaxation(Animal animal, AnimalActivity activity){
 
-        if(activity.getName()==animal.getFavoriteActivity()){
+        if(activity.getName().equals(animal.getFavoriteActivity())){
             int oldHappinessLevel = animal.getHappinessLevel();
             System.out.println(getName()+ " did " +activity.getName() +" recreation activity with "+animal.getName());
             animal.setHappinessLevel((byte) (animal.getHappinessLevel()+2));
