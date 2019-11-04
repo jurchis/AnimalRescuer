@@ -6,7 +6,15 @@ public class Bird extends Animal {
     public Bird(String name) {
         super(name);
     }
-    int singingLevel;
+    private int singingLevel;
+
+    public int getSingingLevel() {
+        return singingLevel;
+    }
+
+    public void setSingingLevel(int singingLevel) {
+        this.singingLevel = singingLevel;
+    }
 
     //Override
     @Override

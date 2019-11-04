@@ -1,10 +1,9 @@
 package com.milnesium;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Game {
@@ -18,14 +17,17 @@ public class Game {
     private AnimalRescuer rescuer2;
     private List<AnimalFood> availableFood = new ArrayList<>();
     private AnimalActivity[] availableActivities = new AnimalActivity[5];
-    private List<AnimalRescuer> rescuers= new ArrayList<>();
+    private List<AnimalRescuer> rescuers = new ArrayList<>();
+    private Animal[] availableAnimals = new Animal[5];
 
-    public void start(){
+    public void start() {
         initializeRescuers();
+        initAnimal();
         initFood();
         initActivities();
         displayActivities();
         displayFood();
+        displayAnimal();
     }
 
     //Constructors Super etc.
@@ -34,24 +36,95 @@ public class Game {
 //    }
 
     //Methods
-    private void initializeRescuers(){
-        System.out.println("\nStart game:");;
-        System.out.println("The competitors are:");
-        int competitorCount = 2;
-        for(int i = 0; i < competitorCount; i++){
-            AnimalRescuer rescuer = new AnimalRescuer("Rescuer"+i);
-            rescuer.setAvailableCash(ThreadLocalRandom.current().nextInt(50,3000));
-            rescuer.setLoveFelt((byte)0);
-            rescuer.setCare((byte) ThreadLocalRandom.current().nextInt(5, 10));
-            rescuer.setYard(ThreadLocalRandom.current().nextBoolean());
-            rescuer.setWorkFromHome(ThreadLocalRandom.current().nextBoolean());
-            System.out.println(rescuer);
-            rescuers.add(rescuer);
-            rescuers.size();
+
+    private void initAnimal() {
+
+        Animal dog = new Dog("Dog");
+        dog.setHappinessLevel(ThreadLocalRandom.current().nextInt(3, 7));
+        dog.setHungryLevel(ThreadLocalRandom.current().nextInt(5, 9));
+        dog.setFavoriteFood("beef");
+        dog.setHealthLevel(ThreadLocalRandom.current().nextInt(3, 7));
+        dog.setAge(ThreadLocalRandom.current().nextInt(2, 15));
+        dog.setEyeColor("blue");
+        dog.setKilograms(30 - 30 / dog.getAge());
+        dog.setFavoriteActivity("running");
+        dog.setOverallColor("grey");
+        dog.setRescuerLove(ThreadLocalRandom.current().nextInt(7, 9));
+//        dog.setBarkingLevel(ThreadLocalRandom.current().nextInt(6, 10));
+        dog.setBehavior("good");
+
+        availableAnimals[0] = dog;
+
+        Animal cat = new Cat("Cat");
+        cat.setHappinessLevel(ThreadLocalRandom.current().nextInt(2, 7));
+        cat.setHungryLevel(ThreadLocalRandom.current().nextInt(7, 9));
+        cat.setFavoriteFood("can fish");
+        cat.setHealthLevel(ThreadLocalRandom.current().nextInt(6, 9));
+        cat.setAge(ThreadLocalRandom.current().nextInt(5, 15));
+        cat.setEyeColor("light blue");
+        cat.setKilograms(3 - 3 / cat.getAge());
+        cat.setFavoriteActivity("toy playing");
+        cat.setOverallColor("grey");
+        cat.setRescuerLove(ThreadLocalRandom.current().nextInt(3, 6));
+        cat.setBehavior("fine");
+//        cat.setMeowLevel(ThreadLocalRandom.current().nextInt(7, 10));
+
+        availableAnimals[1] = cat;
+
+        Animal bird = new Bird("Bird");
+        bird.setHappinessLevel(ThreadLocalRandom.current().nextInt(5, 7));
+        bird.setHungryLevel(ThreadLocalRandom.current().nextInt(6, 9));
+        bird.setFavoriteFood("parakeet");
+        bird.setHealthLevel(ThreadLocalRandom.current().nextInt(6, 9));
+        bird.setAge(ThreadLocalRandom.current().nextInt(7, 20));
+        bird.setEyeColor("dark");
+        bird.setKilograms(1 - 1 / bird.getAge());
+        bird.setFavoriteActivity("karaoke");
+        bird.setOverallColor("red");
+        bird.setRescuerLove(ThreadLocalRandom.current().nextInt(3, 7));
+        bird.setBehavior("good");
+//        bird.setSingingLevel(ThreadLocalRandom.current().nextInt(5, 9));
+
+        availableAnimals[2] = bird;
+    }
+
+    private void displayAnimal() {
+        System.out.println("\nSelect the animal that you want to adopt:");
+        for (int i = 0; i < availableAnimals.length; i++) {
+            if (availableAnimals[i] != null) {
+                System.out.println("Animal no. " + (i + 1) + ". Name: " + availableAnimals[i].getName());
+            }
         }
     }
 
-    private void initFood(){
+    private String getRescuerName(){
+        System.out.println("Enter your player name:");
+
+        Scanner scanner = new Scanner(System.in);
+
+        try{
+            return scanner.next();
+        } catch (InputMismatchException e){
+            System.out.println("You have entered an invalid player name!");
+            return getRescuerName();
+        }
+    }
+
+    private void initializeRescuers() {
+        System.out.println("\nStarting game...");
+
+        String name = getRescuerName();
+        AnimalRescuer rescuer = new AnimalRescuer(name);
+
+        rescuer.setAvailableCash(ThreadLocalRandom.current().nextInt(50, 3000));
+        rescuer.setLoveFelt((byte) 0);
+        rescuer.setCare((byte) ThreadLocalRandom.current().nextInt(5, 10));
+        rescuer.setYard(ThreadLocalRandom.current().nextBoolean());
+        rescuer.setWorkFromHome(ThreadLocalRandom.current().nextBoolean());
+        System.out.println(rescuer);
+    }
+
+    private void initFood() {
         AnimalFood food1 = new AnimalFood("Beef");
         availableFood.add(food1);
 
@@ -59,7 +132,7 @@ public class Game {
         availableFood.add(food2);
     }
 
-    private void initActivities(){
+    private void initActivities() {
         AnimalActivity activity1 = new AnimalActivity("Walking");
         availableActivities[0] = activity1;
 
@@ -67,20 +140,20 @@ public class Game {
         availableActivities[1] = activity2;
     }
 
-    private void displayActivities(){
+    private void displayActivities() {
         System.out.println("\nThe available activities are:");
-        for(int i = 0; i <availableActivities.length; i++){
-            if (availableActivities[i]!=null){
+        for (int i = 0; i < availableActivities.length; i++) {
+            if (availableActivities[i] != null) {
                 System.out.println(availableActivities[i].getName());
             }
         }
     }
 
-    private void displayFood(){
+    private void displayFood() {
         System.out.println("\nThe available food is:");
-        for (AnimalFood f: availableFood
-             ) {
-                System.out.println(f.getName());
+        for (AnimalFood f : availableFood
+        ) {
+            System.out.println(f.getName());
         }
     }
 

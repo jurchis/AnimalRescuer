@@ -5,9 +5,9 @@ public class Animal{
     //Variables
     private String name;
     private byte age;
-    private byte healthLevel;
-    private byte hungryLevel;
-    private byte happinessLevel;
+    private int healthLevel;
+    private int hungryLevel;
+    private int happinessLevel;
     private String favoriteFood;
     private String favoriteActivity;
 
@@ -17,8 +17,8 @@ public class Animal{
     //good, bad, not so good
     private String behavior;
     //how much does it care about the rescuer 1 to 10
-    private byte rescuerLove;
-    private byte kilograms;
+    private int rescuerLove;
+    private int kilograms;
 
     //Constructors super etc
     public Animal(String name) {
@@ -38,31 +38,31 @@ public class Animal{
         return age;
     }
 
-    public void setAge(byte age) {
-        this.age = age;
+    public void setAge(int age) {
+        this.age = (byte) age;
     }
 
-    public byte getHealthLevel() {
+    public int getHealthLevel() {
         return healthLevel;
     }
 
-    public void setHealthLevel(byte healthLevel) {
+    public void setHealthLevel(int healthLevel) {
         this.healthLevel = healthLevel;
     }
 
-    public byte getHungryLevel() {
+    public int getHungryLevel() {
         return hungryLevel;
     }
 
-    public void setHungryLevel(byte hungryLevel) {
+    public void setHungryLevel(int hungryLevel) {
         this.hungryLevel = hungryLevel;
     }
 
-    public byte getHappinessLevel() {
+    public int getHappinessLevel() {
         return happinessLevel;
     }
 
-    public void setHappinessLevel(byte happinessLevel) {
+    public void setHappinessLevel(int happinessLevel) {
         this.happinessLevel = happinessLevel;
     }
 
@@ -106,19 +106,19 @@ public class Animal{
         this.behavior = behavior;
     }
 
-    public byte getRescuerLove() {
+    public int getRescuerLove() {
         return rescuerLove;
     }
 
-    public void setRescuerLove(byte rescuerLove) {
+    public void setRescuerLove(int rescuerLove) {
         this.rescuerLove = rescuerLove;
     }
 
-    public byte getKilograms() {
+    public int getKilograms() {
         return kilograms;
     }
 
-    public void setKilograms(byte kilograms) {
+    public void setKilograms(int kilograms) {
         this.kilograms = kilograms;
     }
 

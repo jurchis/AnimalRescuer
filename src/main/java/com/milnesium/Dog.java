@@ -3,7 +3,15 @@ package com.milnesium;
 public class Dog extends Animal {
 
     //Variables
-    int barkingLevel;
+    private int barkingLevel;
+
+    public int getBarkingLevel() {
+        return barkingLevel;
+    }
+
+    public void setBarkingLevel(int barkingLevel) {
+        this.barkingLevel = barkingLevel;
+    }
 
     //Constructors Super etc.
     public Dog(String name) {
