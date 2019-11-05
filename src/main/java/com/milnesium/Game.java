@@ -28,6 +28,8 @@ public class Game {
         displayActivities();
         displayFood();
         displayAnimal();
+        Animal selectedAnimal = getSelectedAnimalFromUser();
+        selectedAnimal.setName(nameAnimal());
     }
 
     //Constructors Super etc.
@@ -97,14 +99,34 @@ public class Game {
         }
     }
 
-    private String getRescuerName(){
+    private Animal getSelectedAnimalFromUser() {
+        System.out.println("\nPlease select an animal corresponding number:");
+        Scanner scanner = new Scanner(System.in);
+        try {
+            int userChoice = scanner.nextInt();
+            System.out.println("Selected animal is: "+availableAnimals[userChoice - 1]);
+            return availableAnimals[userChoice - 1];
+        } catch (InputMismatchException | ArrayIndexOutOfBoundsException | NullPointerException e) {
+            System.out.println("You have entered an invalid animal selection!");
+            return getSelectedAnimalFromUser();
+        }
+    }
+
+    private String nameAnimal() {
+        System.out.println("\nPlease name your adopted pet:");
+        Scanner scanner = new Scanner(System.in);
+        String animalName = scanner.next();
+        return animalName;
+    }
+
+    private String getRescuerName() {
         System.out.println("Enter your player name:");
 
         Scanner scanner = new Scanner(System.in);
 
-        try{
+        try {
             return scanner.next();
-        } catch (InputMismatchException e){
+        } catch (InputMismatchException e) {
             System.out.println("You have entered an invalid player name!");
             return getRescuerName();
         }
