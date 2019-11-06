@@ -1,6 +1,6 @@
 package com.milnesium;
 
-public class Animal{
+public class Animal {
 
     //Variables
     private String name;
@@ -128,11 +128,11 @@ public class Animal{
         return name;
     }
 
-    public void happy(int happinessLevel){
-        if (happinessLevel>6){
-            System.out.println(getName()+" is happy");}
-        else    {
-            System.out.println(getName()+" is unhappy");
+    public void happy(int happinessLevel) {
+        if (happinessLevel > 6) {
+            System.out.println(getName() + " is happy");
+        } else {
+            System.out.println(getName() + " is unhappy");
         }
     }
 }

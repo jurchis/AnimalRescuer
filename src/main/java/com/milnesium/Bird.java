@@ -6,6 +6,7 @@ public class Bird extends Animal {
     public Bird(String name) {
         super(name);
     }
+
     private int singingLevel;
 
     public int getSingingLevel() {
@@ -19,10 +20,10 @@ public class Bird extends Animal {
     //Override
     @Override
     public void happy(int happinessLevel) {
-        if (happinessLevel>7){
-            System.out.println(getName()+" is singing");}
-        else    {
-            System.out.println(getName()+" is unhappy");
+        if (happinessLevel > 7) {
+            System.out.println(getName() + " is singing");
+        } else {
+            System.out.println(getName() + " is unhappy");
         }
     }
 }

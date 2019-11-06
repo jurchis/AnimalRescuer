@@ -1,6 +1,6 @@
 package com.milnesium;
 
-public class AnimalRescuerCompanion extends AnimalRescuer{
+public class AnimalRescuerCompanion extends AnimalRescuer {
 
     //Variables
     //from 1 to 10 how close the rescuer with his back-up is

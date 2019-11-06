@@ -1,6 +1,6 @@
 package com.milnesium;
 
-public class AnimalToys extends AnimalStuff{
+public class AnimalToys extends AnimalStuff {
 
     //Variables
     private String color;
@@ -14,6 +14,7 @@ public class AnimalToys extends AnimalStuff{
     public String getColor() {
         return color;
     }
+
     public void setColor(String color) {
         this.color = color;
     }

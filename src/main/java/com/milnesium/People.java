@@ -20,8 +20,7 @@ public class People {
 
     //Methods
     public void feedAnimal(String Animal, String AnimalFood) {
-        System.out.println(getName()+" just gave some "+ AnimalFood + " food to " + Animal);
-
+        System.out.println(getName() + " just gave some " + AnimalFood + " food to " + Animal);
     }
 
     //Getters + Setters
@@ -67,12 +66,11 @@ public class People {
 
     @Override
     public String toString() {
-        return "People{" +
-                "name='" + name + '\'' +
-                ", availableCash=" + availableCash +
-                ", care=" + care +
-                ", yard=" + yard +
-                ", workFromHome=" + workFromHome +
+        return "Player name is " + name +
+                ", and has availableCash=" + availableCash +
+                ", showing care for animals = " + care +
+                "out of 10. More than that yard=" + yard +
+                " and workFromHome=" + workFromHome +
                 '}';
     }
 }

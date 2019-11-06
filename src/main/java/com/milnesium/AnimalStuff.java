@@ -32,6 +32,6 @@ public class AnimalStuff {
     //Override the toString class in order to display the actual name in method from class AnimalRescuer
     @Override
     public String toString() {
-        return  name;
+        return name;
     }
 }

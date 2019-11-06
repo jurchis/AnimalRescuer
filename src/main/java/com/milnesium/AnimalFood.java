@@ -1,11 +1,8 @@
 package com.milnesium;
 
-//import java.util.Calendar;
-//import java.util.GregorianCalendar;
 import java.time.LocalDate;
-//import java.util.Date;
 
-public class AnimalFood extends AnimalStuff{
+public class AnimalFood extends AnimalStuff {
 
     //Variables
     private boolean stockAvailability;

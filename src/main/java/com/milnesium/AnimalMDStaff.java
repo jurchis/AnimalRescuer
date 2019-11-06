@@ -1,6 +1,6 @@
 package com.milnesium;
 
-public class AnimalMDStaff extends People{
+public class AnimalMDStaff extends People {
 
     //Variables
     private String specialization;

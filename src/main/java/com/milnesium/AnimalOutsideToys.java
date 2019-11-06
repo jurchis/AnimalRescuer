@@ -1,6 +1,6 @@
 package com.milnesium;
 
-public class AnimalOutsideToys extends AnimalStuff{
+public class AnimalOutsideToys extends AnimalStuff {
 
     //Variables
     private String outsidePurpose;
