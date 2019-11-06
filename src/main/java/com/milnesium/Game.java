@@ -18,8 +18,9 @@ public class Game {
     private List<AnimalFood> availableFood = new ArrayList<>();
     private AnimalActivity[] availableActivities = new AnimalActivity[5];
     private List<AnimalRescuer> rescuers = new ArrayList<>();
-    private Animal[] availableAnimals = new Animal[5];
+    private Animal[] availableAnimals = new Animal[3];
     private static int noOfDays = 5;
+    LettersValidation lettersValidation = new LettersValidation();
 
 
     public void start() {
@@ -133,7 +134,7 @@ public class Game {
             System.out.println("Selected animal is: " + availableAnimals[userChoice - 1]);
             return availableAnimals[userChoice - 1];
         } catch (InputMismatchException | ArrayIndexOutOfBoundsException | NullPointerException e) {
-            System.out.println("You have entered an invalid animal selection!");
+            System.out.println("You have entered an invalid animal selection! Try again!");
             return getSelectedAnimalFromUser();
         }
     }
@@ -142,21 +143,35 @@ public class Game {
         System.out.println("\nPlease name your adopted pet:");
         Scanner scanner = new Scanner(System.in);
         try {
-            return scanner.next();
-        } catch (InputMismatchException e) {
-            System.out.println("You have entered an invalid animal name!");
+            String userInput = scanner.next();
+            boolean bool = lettersValidation.validateString(userInput);
+            if (bool) {
+                return userInput;
+            } else {
+                System.out.println("You have entered an invalid animal name! Try again!");
+                return nameAnimal();
+            }
+        } catch (InputMismatchException | ArrayIndexOutOfBoundsException | NullPointerException e) {
+            System.out.println("You have entered an invalid animal name! Only letters allowed! Try again!");
             return nameAnimal();
         }
     }
 
     private String getRescuerName() {
-        System.out.println("Enter your player name:");
+        System.out.println("\nEnter your player name:");
         Scanner scanner = new Scanner(System.in);
 
         try {
-            return scanner.next();
+            String userInput = scanner.next();
+            boolean bool = lettersValidation.validateString(userInput);
+            if (bool) {
+                return userInput;
+            } else {
+                System.out.println("You have entered an invalid player name! Only letters allowed! Try again!");
+                return getRescuerName();
+            }
         } catch (InputMismatchException e) {
-            System.out.println("You have entered an invalid player name!");
+            System.out.println("You have entered an invalid player name! Try again!");
             return getRescuerName();
         }
     }
@@ -232,16 +247,26 @@ public class Game {
         displayFood();
         System.out.println("Please select one of the above options:");
         Scanner scanner = new Scanner(System.in);
-        int userChoice = scanner.nextInt();
-        return availableFood.get(userChoice - 1);
+        try {
+            int userChoice = scanner.nextInt();
+            return availableFood.get(userChoice - 1);
+        } catch (InputMismatchException | IndexOutOfBoundsException | NullPointerException e) {
+            System.out.println("You have entered an invalid option! Try again!");
+            return requireFeeding();
+        }
     }
 
     private AnimalActivity requireActivity() {
         displayActivities();
         System.out.println("Please select one of the above options:");
         Scanner scanner = new Scanner(System.in);
-        int userChoice = scanner.nextInt();
-        return availableActivities[userChoice - 1];
+        try {
+            int userChoice = scanner.nextInt();
+            return availableActivities[userChoice - 1];
+        } catch (InputMismatchException | ArrayIndexOutOfBoundsException | NullPointerException e) {
+            System.out.println("You have entered an invalid option! Try again!");
+            return requireActivity();
+        }
     }
 
     //Getters + Setters
